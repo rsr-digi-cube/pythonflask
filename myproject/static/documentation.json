@@ -1,0 +1,101 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "Practce api",
+    "description": "Practce",
+    "version": "1.0"
+  },
+  "produces": [
+    "application/json"
+  ],
+  "host": "192.168.43.238:8080",
+  "basePath": "",
+  "paths": {
+    "/admin/login": {
+      "post": {
+        "x-swagger-router-controller": "middleware-name1",
+        "operationId": "/admin/login",
+        "tags": [
+          "admin"
+        ],
+        "description": "/admin/login",
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "email",
+            "description": "email is required",
+            "required": false,
+            "type": "string"
+          },
+          {
+            "in": "formData",
+            "name": "password",
+            "description": "password is required",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+
+     "/admin/uploadFile": {
+      "post": {
+        "x-swagger-router-controller": "middleware-name1",
+        "operationId": "/admin/uploadFile",
+        "tags": [
+          "admin"
+        ],
+        "description": "/admin/uploadFile",
+        "consumes": "multipart/form-data",
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "file",
+            "description": "file is required",
+            "required": true,
+            "type": "file"
+          }
+        ],
+        "responses": {}
+      }
+    },
+     "/admin/register": {
+      "post": {
+        "x-swagger-router-controller": "middleware-name1",
+        "operationId": "/admin/register",
+        "tags": [
+          "admin"
+        ],
+        "description": "/admin/register",
+        "consumes": "multipart/form-data",
+        "parameters": [
+          {
+            "in": "formData",
+            "name": "email",
+            "description": "email is required",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {}
+      }
+    },
+     "/admin/Requestpractice": {
+      "get": {
+        "x-swagger-router-controller": "middleware-name1",
+        "operationId": "/admin/Requestpractice",
+        "tags": [
+          "admin"
+        ],
+        "description": "/admin/Requestpractice",
+        "consumes": "multipart/form-data",
+        "parameters": [
+
+        ],
+        "responses": {}
+      }
+    }
+
+  }
+}
